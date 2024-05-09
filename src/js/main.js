@@ -23,6 +23,17 @@ form.addEventListener("submit", function(eventOfClick) {
     eventOfClick.preventDefault();
     //trae el valor de la pagina
     console.log(name.value)
+    console.log(lastName.value)
+    console.log(email.value)
+
+    const newCoder={
+        id: Date.now(),
+        name: name.value,
+        lastName: lastName.value,
+        email: email.value,
+    }
+    console.log(newCoder)
+    eventOfClick.preventDefault()
 })
 
 
