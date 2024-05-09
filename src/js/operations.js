@@ -34,6 +34,8 @@
 // }
 
 export function index(coders, tbody) {
+  tbody.innerHTML = "";
+
   for (let i = 0; i < coders.length; i++) {
     tbody.innerHTML += `  
           <tr>
@@ -43,4 +45,15 @@ export function index(coders, tbody) {
           <td class="text-lowercase">${coders[i].email}<br>
           <tr>`;
   }
+}
+
+export function create(name, lastName, email, coders) {
+  const newCoder = {
+    id: Date.now(),
+    name: name.value,
+    lastName: lastName.value,
+    email: email.value,
+  };
+  coders.push(newCoder);
+  
 }
