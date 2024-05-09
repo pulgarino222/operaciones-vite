@@ -20,6 +20,7 @@
 //       <tr>`
 //     });
 // }
+
 // function withForIn(){
 //     for (const index in coders) {
 //         tbody.innerHTML += `
@@ -31,6 +32,7 @@
 //           <tr>`
 //         }
 // }
+
 export function withFor(coders, tbody) {
   for (let i = 0; i < coders.length; i++) {
     tbody.innerHTML += `  
