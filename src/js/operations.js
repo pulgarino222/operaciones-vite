@@ -33,7 +33,7 @@
 //         }
 // }
 
-export function withFor(coders, tbody) {
+export function index(coders, tbody) {
   for (let i = 0; i < coders.length; i++) {
     tbody.innerHTML += `  
           <tr>

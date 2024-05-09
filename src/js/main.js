@@ -8,10 +8,10 @@ import { coders } from "../../public/data/database.js";
 import * as bootstrap from "bootstrap";
 
 
-import { withFor } from "./operations.js";
+import { index } from "./operations.js";
 
 const tbody=document.querySelector("tbody");
-withFor(coders,tbody)
+index(coders,tbody)
 
 let name=document.querySelector("#name")
 let lastName=document.querySelector("#last-name")
@@ -32,7 +32,10 @@ form.addEventListener("submit", function(eventOfClick) {
         lastName: lastName.value,
         email: email.value,
     }
-    console.log(newCoder)
+    coders.push(newCoder)
+    index(coders,tbody)
+    
+    
     eventOfClick.preventDefault()
 })
 
