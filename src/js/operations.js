@@ -43,6 +43,11 @@ export function index(coders, tbody) {
           <td>${coders[i].name}</td>
           <td>${coders[i].lastName}</td>
           <td class="text-lowercase">${coders[i].email}<br>
+          <td>
+          <button type="button" data-id=${coders[i].id} class="btn btn-primary" >datils</button>
+          <button type="button" data-id=${coders[i].id} class="btn btn-danger">delete</button>
+          <button type="button" data-id=${coders[i].id} class="btn btn-warning">edit</button>
+          </td>
           <tr>`;
   }
 }
@@ -55,5 +60,24 @@ export function create(name, lastName, email, coders) {
     email: email.value,
   };
   coders.push(newCoder);
+  
+}
+
+export function Eliminar(e,coders){
+  if (e.target.classList.contains("btn-danger")) {
+    let idParaEliminar = e.target.getAttribute("data-id");
+    console.log(idParaEliminar);
+
+    // let versionLarge = e.target.parentelement.parentElement.parentElement.firstElementChild.TextContent
+    // console.log(versionLarge);
+    
+    
+    coders.forEach((coder,index) => {
+      if (coder.id == idParaEliminar) {
+        console.log("el coder fue encontrado listo para eliminar");
+        coders.splice(index,1)
+      }
+    });
+  }
   
 }

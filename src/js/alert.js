@@ -13,10 +13,10 @@ import Swal from "sweetalert2";
     },
   });
 
-export function alertSmallSucces() {
+export function alertSmallSucces(parametro) {
     Toast.fire({
       icon: "success",
-      title: "saved",
+      title: parametro,
     });
   }
 
