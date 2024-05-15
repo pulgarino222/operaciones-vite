@@ -63,10 +63,8 @@ export function create(name, lastName, email, coders) {
   
 }
 
-export function Eliminar(e,coders){
-  if (e.target.classList.contains("btn-danger")) {
-    let idParaEliminar = e.target.getAttribute("data-id");
-    console.log(idParaEliminar);
+export function Eliminar(coders,idParaEliminar){
+  
 
     // let versionLarge = e.target.parentelement.parentElement.parentElement.firstElementChild.TextContent
     // console.log(versionLarge);
@@ -78,6 +76,6 @@ export function Eliminar(e,coders){
         coders.splice(index,1)
       }
     });
-  }
+  
   
 }
